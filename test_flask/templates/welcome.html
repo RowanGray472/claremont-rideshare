@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+
+    <!-- Input Form -->
+	<h2>Enter Your Details:</h2>
+	<form method="POST" action="{{ url_for('welcome', username=username) }}">
+	    <label for="time">Time:</label>
+	    <input type="time" id="time" name="time" required><br><br>
+
+	    <label for="place">Place:</label>
+	    <select id="place" name="place" required>
+		<option value="" disabled selected>Select a place</option>
+		<option value="New York">New York</option>
+		<option value="Los Angeles">Los Angeles</option>
+		<option value="Chicago">Chicago</option>
+		<option value="Houston">Houston</option>
+		<option value="San Francisco">San Francisco</option>
+	    </select><br><br>
+
+	    <!-- Date Input -->
+	    <label for="date">Date:</label>
+	    <input type="date" id="date" name="date" required><br><br>
+
+	    <button type="submit">Submit</button>
+	</form>
+
+
+    <!-- Display Stored Data -->
+    <h2>Submitted Entries:</h2>
+    <ul>
+        {% for user in users %}
+            <li><strong>{{ user.username }}:</strong> Time - {{ user.time }}, Place - {{ user.place }}, Date - {{ user.date }}</li>
+        {% else %}
+            <li>No data submitted yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
