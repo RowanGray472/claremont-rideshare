@@ -3,7 +3,8 @@
 ## Concept Ladder
 
 Up is why, down is how
-
+| Concept Ladder|
+| ------------- |
 | Because uber wants to make money, public transport requires raising taxes, and the colleges haven't faced enough pressure to make it affordable |
 | Because surge pricing, no public transport, and no good shuttles from the colleges |
 | Because getting to the airport is a lot more expensive than it needs to be |
